@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name='viewport' content='width=device-wdith', initial
+		-scale=0.5'>
+		<link rel="stylesheet" href="styles.css">
+		<script type="module" src="script.js"></script>
+		<link rel="shortcut icon" type="image/jpg" href="mask.png"/>
+	</head>
+	<body>
+		<nav>
+		<nav>
+	<!-- USERS WHO ARE NOT LOGGED WILL SEE THIS -->
+	{{^private}}
+		<a href='login'>Login</a>
+		<a href='signup'>Signup</a>
+	{{/private}}
+	
+	<!-- USERS WHO ARE LOGGED WILL SEE THIS -->
+	{{#private}}
+		<a href='account'>
+			<img src='{{avatar}}'>
+		</a>
+		<a onclick='logout()'>Logout</a>
+	{{/private}}
+</nav>	
+		</nav>
+		<main>
+			<div>
+				<h1>
+					We Sell Masks
+				</h1>
+				<h2>
+					For Your Protection
+				</h2>
+			</div>
+		</main>
+		<footer>
+			Mask Boys
+		</footer>
+	</body>
+	
+</html>
